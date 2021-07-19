@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">MyMessages
+  <ul class="nav nav-pills justify-content-end">
+    <li *ngIf = "userIsAuthenticated" class="nav-item"><a class="nav-link" mat-button [routerLinkActiveOptions]="{exact : true}"
+        routerLinkActive='mat-accent' [routerLink]="['/posts']" style="cursor: pointer">Posts</a></li>
+    <li *ngIf = "userIsAuthenticated" class="nav-item">
+      <a class="nav-link" mat-button routerLinkActive='mat-accent' [routerLink]="['/posts', 'create']" >Create</a></li>
+    <li *ngIf = "!userIsAuthenticated" class="nav-item ">
+      <a class="nav-link" mat-button routerLinkActive='mat-accent' [routerLink]="['/login']">Login
+      </a>
+    </li>
+    <li *ngIf = "!userIsAuthenticated" class="nav-item ">
+      <a class="nav-link" mat-button routerLinkActive='mat-accent' [routerLink]="['/signup']">Signup
+      </a>
+    </li>
+    <li *ngIf = "userIsAuthenticated" class="nav-item">
+      <button mat-button (click) = "onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>

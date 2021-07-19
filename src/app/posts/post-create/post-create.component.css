@@ -1,0 +1,24 @@
+.container { 
+    margin-top: 30px;
+}
+/* mat-card {
+    width: 80%;
+    margin: auto;
+  } */
+  
+mat-card mat-form-field {
+    width: 100%;
+  }
+mat-spinner {
+  margin :auto
+}
+input[type ="file"] {
+  visibility: hidden;
+}
+.image-preview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+.image-preview img {
+  height: 100%;
+}
